@@ -1,0 +1,48 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" loadImage="pyxll.load_image">
+    <ribbon>
+        <tabs>
+            <tab id="MAQLabTab" label="MAQLab">
+                <group id="ConnectionGroup" label="Connection">
+                    <button id="initButton2"
+                            size="large"
+                            label="Connect"
+                            onAction="maqlab_ribbon_functions.on_initialize_button"
+                            image="icons/green_start.png"/>
+                     <button id="initButton1"
+                            size="large"
+                            label="ReConnect"
+                            onAction="maqlab_ribbon_functions.on_initialize_button"
+                            image="icons/reload.png"/>
+
+
+                </group>
+                <group id="MqttGroup" label="MQTT settings">
+
+                    <editBox id="editboxHostname"
+                             label="Hostname"
+                              />
+                    <editBox id="editboxPort"
+                             label="Port"
+                              />
+                    <separator id="se"/>
+                    <editBox id="editboxUser"
+                             label="Username"
+                              />
+                    <editBox id="editboxPass"
+                             label="Password"
+                              />
+                </group>
+                <group id="DeviceGroup" label="Device settings">
+                    <button id="devices"
+                            label="Start"
+                            onAction="maqlab_ribbon_functions.on_start_button"/>
+                </group>
+                <group id="DeviceFilterGroup" label="Device filter">
+                    <checkBox id="checkBoxPowersupplyDC"
+                            label="Power DC"
+                            onAction="maqlab_ribbon.checkbox_on_action"/>
+                </group>
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>
